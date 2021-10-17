@@ -42,10 +42,16 @@ namespace TicTacToe
                 eventManager = GetComponent<EventManager>();
             if (tttManager == null)
                 tttManager = GetComponent<TTTManager>();
+
+            eventManager.GameExit.AddListener(OnExitGame);
         }
         private void Start()
         {
             eventManager.EnterStartingScreen.Invoke();
+        }
+        private void OnExitGame()
+        {
+            Application.Quit();
         }
 
     }

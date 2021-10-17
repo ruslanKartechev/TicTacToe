@@ -73,7 +73,6 @@ namespace TicTacToe.Display
         public void ExitGame( )
         {
             GameManager.Instance.eventManager.GameExit.Invoke();
-            Invoke( "Application.Quit", 1f );
         }
         public void PlayTTT()
         {
@@ -91,7 +90,6 @@ namespace TicTacToe.Display
             introAnimator = introAnimatorController.gameObject.GetComponent<Animator>();
             returnButton.transform.localPosition = Vector2.zero;
             playTTTButton.transform.localPosition = Vector2.zero;
-
         }
 
 
